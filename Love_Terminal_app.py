@@ -31,6 +31,11 @@ pairs = [
     ("My future doctorrrrr!! I love hearing about your work stories and keeping you company whenever. Seeing your little updates brings a smile to my face everytime. 📨","updates.jpg",    "image"),
 ]
 
+# play background music
+audio_file = open("background.mp3", "rb")
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format="audio/mp3")
+
 # Intro image
 intro = ImageOps.exif_transpose(Image.open("us_together.JPG"))
 st.image(intro, caption="❤️ Lahana ❤️", use_container_width=True)
