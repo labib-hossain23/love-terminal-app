@@ -35,6 +35,10 @@ pairs = [
 audio_file = open("background.mp3", "rb")
 audio_bytes = audio_file.read()
 st.audio(audio_bytes, format="audio/mp3")
+audio_file = open("Titli.mp3", "rb")
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format="audio/mp3")
+st.info("P.S. I couldn't decide what our song is buttt I made the second one less hindu just for us. :) I love you ❤️")
 
 # Intro image
 intro = ImageOps.exif_transpose(Image.open("us_together.JPG"))
