@@ -49,7 +49,26 @@ if "queue" not in st.session_state:
     st.session_state.queue = pairs.copy()
     random.shuffle(st.session_state.queue)
 
-st.title("💘 Welcome to the Love Terminal 💘")
+st.markdown("""
+    <style>
+        .love-title {
+            font-size: 2.2rem; /* adjust this down to make it smaller or up to make it larger */
+            font-weight: 800;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .love-title span {
+            font-size: 2rem; /* optional: scale emoji separately */
+        }
+    </style>
+    <div class="love-title">
+        <span>💘</span> Welcome to the Love Terminal <span>💘</span>
+    </div>
+""", unsafe_allow_html=True)
+
 
 name = st.text_input("What is your name, my love?", "")
 
